@@ -6,6 +6,7 @@ function Formulaire ()  {
     const [email,setEmail]=useState('')
     const [motdepasse,setMotdepasse]=useState('')
     const [message, setMessage] = useState('');
+     const nav=useNavigate()
 
     const handleSubmit = async (e)=> {
         e.preventDefault();
@@ -30,6 +31,7 @@ function Formulaire ()  {
       console.log('Réponse:', data);
       if (res.ok) {
         setMessage('connexion réussie ');
+        nav("/Dashboard")
       } else {
         setMessage(data.message || 'Erreur ');
       }
@@ -40,7 +42,7 @@ function Formulaire ()  {
      }
 
      const navigate=useNavigate()
-
+    
  const handleClick =()=>{
     navigate("/Inscription")
 

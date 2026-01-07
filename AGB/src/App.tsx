@@ -1,7 +1,9 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Acceuil from './composant/Acceuil.jsx';
 import Formulaire from './composant/Formulaire.jsx';
-import Inscription from './composant/Inscription.jsx'
+import Inscription from './composant/Inscription.jsx';
+import Dashboard from './Dashboard/Dashboard.jsx'
+
 
 
 function App() {
@@ -10,6 +12,7 @@ function App() {
         <Route path="/" element={<Acceuil />} />
         <Route path="/formulaire" element={<Formulaire />} />
         <Route path="/inscription" element={<Inscription />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
       </Routes>
   );
 }

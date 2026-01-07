@@ -9,7 +9,7 @@ function Acceuil(){
     return(
         <>
         <section className="debut">
-            <h1>Bienvenu sur ABG</h1>
+            <h1>Bienvenu sur AGB</h1>
             <button type='button' onClick={handleClick} >Start</button>
         </section>
         </>
