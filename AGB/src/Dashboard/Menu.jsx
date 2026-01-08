@@ -1,6 +1,9 @@
+import './Dashboardstyle/Menu.css'
 function Menu (){
     return(
-        <p> je suis un menu</p>
+        <main id='main'>
+            
+        </main>
     )
 }
 
