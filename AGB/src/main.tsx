@@ -1,15 +1,21 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
-import App from './App.tsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import "./index.css";
+import App from "./App.jsx";
 
- createRoot(document.getElementById('root')!).render(
-    <StrictMode>
-        <BrowserRouter>
-             <App />    
-        </BrowserRouter>
-        
-    </StrictMode>,
-)
+// ✅ IMPORT DU CONTEXT
+import { TransactionProvider } from "./context/TransactionContext.jsx";
+
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
+    <BrowserRouter>
+      {/* ✅ BOÎTE CENTRALE */}
+      <TransactionProvider>
+        <App />
+      </TransactionProvider>
+    </BrowserRouter>
+  </StrictMode>
+);
 
 
